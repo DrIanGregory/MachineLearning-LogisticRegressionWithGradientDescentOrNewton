@@ -68,23 +68,23 @@ python logisticRegression.py
 		
 <h3>Expected Output</h3>
 <pre>
-Iteration #:        1.  Cost: +0.2190
-Iteration #:        2.  Cost: +0.1058
-Iteration #:        3.  Cost: +0.0554
-Iteration #:        4.  Cost: +0.0301
-Iteration #:        5.  Cost: +0.0166
-Iteration #:        6.  Cost: +0.0091
-Iteration #:        7.  Cost:    +nan.
-Finished because singular Hessian. Using newton optimisation method.
-================================================================================
-LOGISTIC REGRESSION USING NEWTON TERRMINATION RESULTS
-================================================================================
-Initial Weights were:             0.0, 0.0, 0.0.
-   With initial cost:       +0.693147.
-		# Iterations:              +7.    
-	   Final weights:    theta0:-25.51, theta1:+11.25, theta02:-11.283.
-		  Final cost:       +0.009061.
-================================================================================
+ Iteration #:        1.  Cost: +0.2190
+ Iteration #:        2.  Cost: +0.1058
+ Iteration #:        3.  Cost: +0.0554
+ Iteration #:        4.  Cost: +0.0301
+ Iteration #:        5.  Cost: +0.0166
+ Iteration #:        6.  Cost: +0.0091
+ Iteration #:        7.  Cost:    +nan.
+ Finished because singular Hessian. Using newton optimisation method.
+ ================================================================================
+ LOGISTIC REGRESSION USING NEWTON TERRMINATION RESULTS
+ ================================================================================
+ Initial Weights were:             0.0, 0.0, 0.0.
+ With initial cost:       +0.693147.
+ # Iterations:              +7.    
+ Final weights:    theta0:-25.51, theta1:+11.25, theta02:-11.283.
+ Final cost:       +0.009061.
+ ================================================================================
 
 	Iteration #:   10,000.  Cost: +0.0343
 	Iteration #:   20,000.  Cost: +0.0288
