@@ -50,7 +50,7 @@ Convergence is reached when either the tolerance level on the cost function has 
 <h4>Regularisation</h4> 
 <p>
 None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" style="vertical-align:sub;width=9.589pt height=22.831pt"/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" vertical-align:sub width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" vertical-align:sub width=52.511355599999995pt height=24.65753399999998pt/>.
-</P>
+</p>
 
 <p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
  
@@ -86,25 +86,25 @@ Initial Weights were:             0.0, 0.0, 0.0.
 		  Final cost:       +0.009061.
 ================================================================================
 
-Iteration #:   10,000.  Cost: +0.0343
-Iteration #:   20,000.  Cost: +0.0288
-Iteration #:   30,000.  Cost: +0.0257
-Iteration #:   40,000.  Cost: +0.0234
-Iteration #:   50,000.  Cost: +0.0215
-Iteration #:   60,000.  Cost: +0.0199
-Iteration #:   70,000.  Cost: +0.0185
-Iteration #:   80,000.  Cost: +0.0173
-Iteration #:   88,543.  Cost: +0.0164.
-Finished because cost function tolerance reached. Using gradientAscent optimisation method.
-================================================================================
-LOGISTIC REGRESSION USING GRADIENTASCENT TERRMINATION RESULTS
-================================================================================
-Initial Weights were:             0.0, 0.0, 0.0.
-   With initial cost:       +0.693147.
-		# Iterations:         +88,543.    
-	   Final weights:    theta0:-13.42, theta1:+9.09, theta02:-11.539.
-		  Final cost:       +0.016394.
-================================================================================
+	Iteration #:   10,000.  Cost: +0.0343
+	Iteration #:   20,000.  Cost: +0.0288
+	Iteration #:   30,000.  Cost: +0.0257
+	Iteration #:   40,000.  Cost: +0.0234
+	Iteration #:   50,000.  Cost: +0.0215
+	Iteration #:   60,000.  Cost: +0.0199
+	Iteration #:   70,000.  Cost: +0.0185
+	Iteration #:   80,000.  Cost: +0.0173
+	Iteration #:   88,543.  Cost: +0.0164.
+ 	Finished because cost function tolerance reached. Using gradientAscent optimisation method.
+	================================================================================
+	LOGISTIC REGRESSION USING GRADIENTASCENT TERRMINATION RESULTS
+	================================================================================
+	Initial Weights were:             0.0, 0.0, 0.0.
+   	With initial cost:       +0.693147.
+	# Iterations:         +88,543.    
+	Final weights:    theta0:-13.42, theta1:+9.09, theta02:-11.539.
+	Final cost:       +0.016394.
+	================================================================================
 
 ================================================================================
 LOGISTIC REGRESSION USING SKLEARN TERMINATION RESULTS
