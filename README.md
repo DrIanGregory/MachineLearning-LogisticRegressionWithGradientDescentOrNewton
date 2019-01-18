@@ -9,11 +9,11 @@
 
 <p float="left">
   <img src="/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
+  <img src="/logisticRegressionBoundarySimple.png" width="400"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
   <img src="/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="/logisticRegressionNewtonCost.png" width="400"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
@@ -48,7 +48,7 @@ Convergence is reached when either the tolerance level on the cost function has 
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" align=middle width=9.58908224999999pt height=22.831056599999986pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" width=9.58908224999999pt height=22.831056599999986pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg"width=52.511355599999995pt height=24.65753399999998pt/>.
  
 <p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
  
@@ -66,23 +66,23 @@ python logisticRegression.py
 		
 <h3>Expected Output</h3>
 <pre>
-	Iteration #:        1.  Cost: +0.2190
-	Iteration #:        2.  Cost: +0.1058
-	Iteration #:        3.  Cost: +0.0554
-	Iteration #:        4.  Cost: +0.0301
-	Iteration #:        5.  Cost: +0.0166
-	Iteration #:        6.  Cost: +0.0091
-	Iteration #:        7.  Cost:    +nan.
-	Finished because singular Hessian. Using newton optimisation method.
-	================================================================================
-	LOGISTIC REGRESSION USING NEWTON TERRMINATION RESULTS
-	================================================================================
-	Initial Weights were:             0.0, 0.0, 0.0.
-	   With initial cost:       +0.693147.
-			# Iterations:              +7.    
-		   Final weights:    theta0:-25.51, theta1:+11.25, theta02:-11.283.
-			  Final cost:       +0.009061.
-	================================================================================
+Iteration #:        1.  Cost: +0.2190
+Iteration #:        2.  Cost: +0.1058
+Iteration #:        3.  Cost: +0.0554
+Iteration #:        4.  Cost: +0.0301
+Iteration #:        5.  Cost: +0.0166
+Iteration #:        6.  Cost: +0.0091
+Iteration #:        7.  Cost:    +nan.
+Finished because singular Hessian. Using newton optimisation method.
+================================================================================
+LOGISTIC REGRESSION USING NEWTON TERRMINATION RESULTS
+================================================================================
+Initial Weights were:             0.0, 0.0, 0.0.
+   With initial cost:       +0.693147.
+		# Iterations:              +7.    
+	   Final weights:    theta0:-25.51, theta1:+11.25, theta02:-11.283.
+		  Final cost:       +0.009061.
+================================================================================
 
 	Iteration #:   10,000.  Cost: +0.0343
 	Iteration #:   20,000.  Cost: +0.0288
