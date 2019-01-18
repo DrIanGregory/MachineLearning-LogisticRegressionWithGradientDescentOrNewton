@@ -19,44 +19,65 @@
 
 <h3>Model:</h3>
 Estimate Logistic equation
-<p align="center"><img src="svgs/77f007d76a70b0d25e05fe3e7c470caa.svg" align=middle width=107.73545145pt height=34.3600389pt/></p>
+$$
+   p(\hat{y}) = \frac{1}{1+e^{-\hat{y}}}
+$$
 
-Where <img src="svgs/282f38ecf82d8d7b9d2813044262d5f3.svg" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
+Where $\hat{y}$ is given by
 
-<p align="center"><img src="svgs/485220363cbc49355345c0869b2efbdc.svg" align=middle width=608.6145483pt height=18.7598829pt/></p>
+\begin{equation}\label{eq:Hypothesis}
+		\hat{y} = \Theta^T X + \epsilon = \theta_0 + \theta_1 x_1 + \theta_2 x_2 = \theta_0 + \theta_1 \text{SepalLength} +  \theta_2 \text{SepalWidth}
+\end{equation}
 
 And estimated using the conditional maximum Likelihood function
 
-<p align="center"><img src="svgs/ec97e55044e066eda74b67178cbac5b1.svg" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
+$$
+	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )
+$$
 
 using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
-<p align="center"><img src="svgs/67b27afea54f4568a7235ba5ee86524b.svg" align=middle width=471.19492199999996pt height=92.10448995pt/></p>
+\begin{align}
+	\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \\
+    			 &= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk}
+\end{align}
 
 
 <h4>Newton-Raphson</h4> 
 
 Parameter updating is given by
 
-<p align="center"><img src="svgs/3fb78d39cd17bc89fc1a834238876e90.svg" align=middle width=497.30686499999996pt height=179.9989191pt/></p>
+\begin{align}
+	\theta_{n+1} 	&= \theta_n - \frac{\frac{\partial L}{\partial \theta_n}}{\frac{\partial^2 \mathcal{L}}{\partial \theta^2}} \\		\\
+					&= \theta_n - \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{-\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))} \\
+					&= \theta_n + \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))}                    
+\end{align}
 
 Convergence is reached when either the tolerance level on the cost function has been reached
-<p align="center"><img src="svgs/dd837991786bbfa0bd84fa96a9ef45d9.svg" align=middle width=204.557133pt height=16.438356pt/></p>
+$$
+	\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
+$$
  or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" align=middle width=9.58908224999999pt height=22.831056599999986pt/> where Ridge (<img src="svgs/60b6e7fd8b1dea748d9229c2822315dd.svg" align=middle width=39.72592304999999pt height=22.831056599999986pt/>) and Lasso (<img src="svgs/013c1ac9d799485f5896316f664b6365.svg" align=middle width=39.72592304999999pt height=22.831056599999986pt/>).
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\lambda$ where Ridge ($\lambda=0$) and Lasso ($\lambda=1$).
  
-<p align="center"><img src="svgs/683a2c93195f6e2124b7b891a886cfe7.svg" align=middle width=161.45419454999998pt height=14.42921205pt/></p>
-<p align="center"><img src="svgs/1e4aa25855addd713b0c0f9655c641e2.svg" align=middle width=681.9033177pt height=47.60747145pt/></p> 
+$$
+ 	\definecolor{orange}{RGB}{217,86,16}
+$$
+$$
+    	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + {\color{orange}(1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert}
+$$ 
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation \eqref{eq:Hypothesis}.
 
-<p align="center"><img src="svgs/c2dc0870f2b550cd3ee0b0b6f04b5810.svg" align=middle width=274.99568745pt height=36.2778141pt/></p>
+$$	
+	\text{SepalWidth} = - \frac{\theta_0 + \theta_1 \text{SepalLength}}{\theta_2} +  
+$$
 
  
 <h3>How to use</h3>
