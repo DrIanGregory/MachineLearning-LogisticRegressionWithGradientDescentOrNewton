@@ -49,17 +49,17 @@ Convergence is reached when either the tolerance level on the cost function has 
  
 <h4>Regularisation</h4> 
 <p>
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg"  style="padding-top: 5px;vertical-align:middle;width:12pt; height:20pt"/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" style="padding-top: 5px;border-top: 170px; vertical-align:middle;width:47pt; height:20.6pt"/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg"  style="padding-top: 5px;border-top: 170px; vertical-align:middle; width:44.51pt; height:20.65pt"/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg"  style="padding-top: 5px;vertical-align:middle;width:12pt; height:50pt"/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" style="padding-top: 5px; vertical-align:middle;width:47pt; height:20.6pt"/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg"  style="padding-top: 5px; vertical-align:middle; width:44.51pt; height:20.65pt"/>.
 </p>
 
-<p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
+<p align="center"><img src="svgs/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.png" align=middle/></p>
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1). ie.
 
 <p align="center"><img src="svgs/c70f07f91936ea10cae16ace450a0984.svg" align=middle width=260.2377294pt height=79.1309904pt/></p>
 
-<p align="center"><img src="svgs/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.png" align=middle/></p>
+
 
  
 <h3>How to use</h3>
