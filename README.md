@@ -1,7 +1,7 @@
 <h2>MachineLearning-LogisticRegressionWithGradientAscentOrNewton</h2>
 <h3>Description:</h3>
 <ul style="list-style-type:disc">
-	<li>Python script to estimate coefficients for Logistic regression using either Gradient Ascent or Newton-Raphson optimisaiton algorithm. Further can choose none/one/both of Ridge and LASSO regularisation . </li>
+	<li>Python script to estimate coefficients for Logistic regression using either Gradient Ascent or Newton-Raphson optimisaiton algorithm. Further can choose none/one/both of Ridge and LASSO regularisation. </li>
 	<li>Logistic regression implemented from scratch.</li>
 	<li>Using the Iris dataset available in sklearn, which contains characteristics of 3 types of Iris plant and is a common dataset when experimenting with data analysis. To learn more about the dataset, click <a href="https://archive.ics.uci.edu/ml/datasets/iris">here</a>.</li>
 </ul>
