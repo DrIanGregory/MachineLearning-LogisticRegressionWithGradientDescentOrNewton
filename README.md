@@ -1,9 +1,9 @@
 <h2>MachineLearning-LogisticRegressionWithGradientAscentOrNewton</h2>
 <h3>Description:</h3>
 <ul style="list-style-type:disc">
-	<li>Python script to estimate coefficients for Logistic regression using either gradient descent or Newton algorithm and regularisation . </li>
+	<li>Python script to estimate coefficients for Logistic regression using either Gradient Ascent or Newton-Raphson optimisaiton algorithm. Further can choose none/one/both of Ridge and LASSO regularisation . </li>
 	<li>Logistic regression implemented from scratch.</li>
-	<li>Using the Iris dataset available in sklearn, it contains characteristics of 3 types of Iris plant and is a common dataset when experimenting with data analysis. To learn more about the dataset, click <a href="https://archive.ics.uci.edu/ml/datasets/iris">here</a>.</li>
+	<li>Using the Iris dataset available in sklearn, which contains characteristics of 3 types of Iris plant and is a common dataset when experimenting with data analysis. To learn more about the dataset, click <a href="https://archive.ics.uci.edu/ml/datasets/iris">here</a>.</li>
 </ul>
 
 
@@ -25,7 +25,7 @@ Where <img src="svgs/282f38ecf82d8d7b9d2813044262d5f3.svg" align=middle width=9.
 
 <p align="center"><img src="svgs/485220363cbc49355345c0869b2efbdc.svg" align=middle width=608.6145483pt height=18.7598829pt/></p>
 
-And estimates located using optimisation of the conditional maximum Likelihood function
+And estimates are trained using optimisation of the conditional maximum Likelihood (cost) function
 
 <p align="center"><img src="svgs/ec97e55044e066eda74b67178cbac5b1.svg" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
 
@@ -38,7 +38,7 @@ The parameter iterative updates are calculated as
 
 <h4>Newton-Raphson</h4> 
 
-Parameter updating is given by
+The parameter iterative updates are calculated as
 
 <p align="center"><img src="svgs/e784cf3c8a6a969c61573defc296325a.svg" align=middle width=292.36726035pt height=153.69754785pt/></p>
 
@@ -55,9 +55,11 @@ None, either or both LASSO (least absolute shrinkage and selection operator) Reg
 <p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
  
 <h3>Decision Boundary</H3>
-The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
+The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1). ie.
 
 <p align="center"><img src="svgs/c70f07f91936ea10cae16ace450a0984.svg" align=middle width=260.2377294pt height=79.1309904pt/></p>
+
+<p align="center"><img src="svgs/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.svg" align=middle width=260.2377294pt height=79.1309904pt/></p>
 
  
 <h3>How to use</h3>
@@ -115,7 +117,9 @@ python logisticRegression.py
 </pre>
 
 <h3>Highlights</h3>
-Newton Raphson clearly locates coefficients in far less iteration steps than Gradient Ascent.
+<ul style="list-style-type:disc">
+	<li>Newton-Raphson optimisation clearly locates coefficients in far less iteration steps than Gradient Ascent.</li>
+	<li>Logistic regression is a powerful classification tool in machine learning.<li>
 
 
 <h3>Requirements</h3>
