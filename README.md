@@ -8,12 +8,12 @@
 
 
 <p float="left">
-  <img src="/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="/logisticRegressionBoundarySimple.png" width="400"alt="A simple view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundarySimple.png" width="400"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
-  <img src="/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="/logisticRegressionNewtonCost.png" width="400"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionNewtonCost.png" width="400"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
