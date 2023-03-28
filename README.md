@@ -49,7 +49,7 @@ Convergence is reached when either the tolerance level on the cost function has 
  
 <h4>Regularisation</h4> 
 <p>
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg"  style="padding-top: 5px;vertical-align:middle;width:12pt; height:50pt"/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" style="padding-top: 5px; vertical-align:middle;width:47pt; height:20.6pt"/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg"  style="padding-top: 5px; vertical-align:middle; width:44.51pt; height:20.65pt"/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg"  align=middle width=10.57650494999999pt height=14.15524440000002pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" align=middle/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg"  align=middle/>.
 </p>
 
 <p align="center"><img src="svgs/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.png" align=middle/></p>
