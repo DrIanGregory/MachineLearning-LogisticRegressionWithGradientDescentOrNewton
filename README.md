@@ -8,17 +8,17 @@
 
 
 <p float="left">
-  <img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="images/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundaryFancy.png" width="45%" alt="A fancy view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundarySimple.png" width="45%"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
-  <img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="images/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionGradientAscentCost.png" width="45%" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionNewtonCost.png" width="45%" alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
 <h3>Model:</h3>
-**Estimate Logistic equation**
+<b>Estimate Logistic equation</b>
 
 <p align="center"><img src="svgs/77f007d76a70b0d25e05fe3e7c470caa.svg" align=middle width=107.73545145pt height=34.3600389pt/></p>
 
@@ -50,7 +50,7 @@ Convergence is reached when either the tolerance level on the cost function has 
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" align=middle width=9.58908224999999pt height=22.831056599999986pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" width=9.58pt height=22.831pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" width=52.51pt height=24.65pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" width=52.51pt height=24.657pt/>.
  
 <p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
  
@@ -61,8 +61,19 @@ The linear decision boundary shown in the figures results from setting the targe
 
  
 <h3>How to use</h3>
+
+##
+		python logisticRegression.py
+
+##
+	python logisticRegression.py
+
 <pre>
 	python logisticRegression.py
+</pre>
+
+<pre>
+		python logisticRegression.py
 </pre>
 		
 		
