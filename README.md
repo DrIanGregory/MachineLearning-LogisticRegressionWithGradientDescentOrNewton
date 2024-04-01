@@ -55,7 +55,7 @@ None, either or both LASSO (least absolute shrinkage and selection operator) Reg
 
 
 
-Where Ridge <img align=middle float:left src="svgs/8721ef437877ca67d513db00210345fe.svg" width=52.51pt height=24.65pt/> and Lasso <img align=bottom src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" width=52.51pt height=24.657pt/>.
+Where Ridge <img align=middle float:left src="svgs/8721ef437877ca67d513db00210345fe.svg" width=52.51pt height=24.65pt/> and Lasso <img align=middle src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" width=52.51pt height=24.657pt/>.
 
  
 <p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
@@ -68,10 +68,8 @@ The linear decision boundary shown in the figures results from setting the targe
  
 <h3>How to use</h3>
 
-<pre>
-	<code> 
+<pre>	
 python logisticRegression.py
-	<code> 
 </pre>
 		
 		
