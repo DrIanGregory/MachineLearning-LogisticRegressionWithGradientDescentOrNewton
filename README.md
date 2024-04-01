@@ -8,61 +8,61 @@
 
 
 <p float="left">
-  <img src="/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
-  <img src="/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
 <h3>Model:</h3>
-Estimate Logistic equation
+**Estimate Logistic equation**
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/77f007d76a70b0d25e05fe3e7c470caa.svg?invert_in_darkmode" align=middle width=107.73545145pt height=34.3600389pt/></p>
+<p align="center"><img src="svgs/77f007d76a70b0d25e05fe3e7c470caa.svg" align=middle width=107.73545145pt height=34.3600389pt/></p>
 
-Where <img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/282f38ecf82d8d7b9d2813044262d5f3.svg?invert_in_darkmode" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
+Where <img src="svgs/282f38ecf82d8d7b9d2813044262d5f3.svg" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/485220363cbc49355345c0869b2efbdc.svg?invert_in_darkmode" align=middle width=608.6145483pt height=18.7598829pt/></p>
+<p align="center"><img src="svgs/485220363cbc49355345c0869b2efbdc.svg" align=middle width=608.6145483pt height=18.7598829pt/></p>
 
 And estimates located using optimisation of the conditional maximum Likelihood function
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/ec97e55044e066eda74b67178cbac5b1.svg?invert_in_darkmode" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
+<p align="center"><img src="svgs/ec97e55044e066eda74b67178cbac5b1.svg" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
 
 using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/248c208805e4a629ea7ce79de37903bf.svg?invert_in_darkmode" align=middle width=241.29400679999998pt height=92.10448995pt/></p>
+<p align="center"><img src="svgs/248c208805e4a629ea7ce79de37903bf.svg" align=middle width=241.29400679999998pt height=92.10448995pt/></p>
 
 
 <h4>Newton-Raphson</h4> 
 
 Parameter updating is given by
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/e784cf3c8a6a969c61573defc296325a.svg?invert_in_darkmode" align=middle width=292.36726035pt height=153.69754785pt/></p>
+<p align="center"><img src="svgs/e784cf3c8a6a969c61573defc296325a.svg" align=middle width=292.36726035pt height=153.69754785pt/></p>
 
 Convergence is reached when either the tolerance level on the cost function has been reached
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/dd837991786bbfa0bd84fa96a9ef45d9.svg?invert_in_darkmode" align=middle width=204.557133pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/dd837991786bbfa0bd84fa96a9ef45d9.svg" align=middle width=204.557133pt height=16.438356pt/></p>
  or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg?invert_in_darkmode" align=middle width=9.58908224999999pt height=22.831056599999986pt/>. Where Ridge <img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/8721ef437877ca67d513db00210345fe.svg?invert_in_darkmode" align=middle width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/cbf9f67dff9c696b64cb0671c65cac33.svg?invert_in_darkmode" align=middle width=52.511355599999995pt height=24.65753399999998pt/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" align=middle width=9.58908224999999pt height=22.831056599999986pt/>. Where Ridge <img src="svgs/8721ef437877ca67d513db00210345fe.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/> and Lasso <img src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" align=middle width=52.511355599999995pt height=24.65753399999998pt/>.
  
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/aff50dde12db26f251d72a6915701b03.svg?invert_in_darkmode" align=middle width=631.4218416pt height=47.60747145pt/></p> 
+<p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:DrIanGregory/MachineLearning-LogisticRegressionWithGradientDescentOrNewton/master/svgs/c70f07f91936ea10cae16ace450a0984.svg?invert_in_darkmode" align=middle width=260.2377294pt height=79.1309904pt/></p>
+<p align="center"><img src="svgs/c70f07f91936ea10cae16ace450a0984.svg" align=middle width=260.2377294pt height=79.1309904pt/></p>
 
  
 <h3>How to use</h3>
 <pre>
-python logisticRegression.py
+	python logisticRegression.py
 </pre>
 		
 		
