@@ -19,45 +19,45 @@
 
 <h3>Model:</h3>
 Estimate Logistic equation
-<p align="center"><img src="png/77f007d76a70b0d25e05fe3e7c470caa.png" align=middle width=107.73545145pt height=34.3600389pt/></p>
+<p align="center"><img src="png/png_color_blue/77f007d76a70b0d25e05fe3e7c470caa.png" align=middle width=107.73545145pt height=34.3600389pt/></p>
 
-Where <img src="png/282f38ecf82d8d7b9d2813044262d5f3.png" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
+Where <img src="png/png_color_blue/282f38ecf82d8d7b9d2813044262d5f3.png" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
 
-<p align="center"><img src="png/485220363cbc49355345c0869b2efbdc.png" align=middle width=608.6145483pt height=18.7598829pt/></p>
+<p align="center"><img src="png/png_color_blue/485220363cbc49355345c0869b2efbdc.png" align=middle width=608.6145483pt height=18.7598829pt/></p>
 
 And estimates are trained using optimisation of the conditional maximum Likelihood (cost) function
 
-<p align="center"><img src="png/ec97e55044e066eda74b67178cbac5b1.png" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
+<p align="center"><img src="png/png_color_blue/ec97e55044e066eda74b67178cbac5b1.png" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
 
 using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
-<p align="center"><img src="png/248c208805e4a629ea7ce79de37903bf.png" align=middle width=241.29400679999998pt height=92.10448995pt/></p>
+<p align="center"><img src="png/png_color_blue/248c208805e4a629ea7ce79de37903bf.png" align=middle width=241.29400679999998pt height=92.10448995pt/></p>
 
 
 <h4>Newton-Raphson</h4> 
 
 The parameter iterative updates are calculated as
 
-<p align="center"><img src="png/e784cf3c8a6a969c61573defc296325a.png" align=middle width=292.36726035pt height=153.69754785pt/></p>
+<p align="center"><img src="png/png_color_blue/e784cf3c8a6a969c61573defc296325a.png" align=middle width=292.36726035pt height=153.69754785pt/></p>
 
 Convergence is reached when either the tolerance level on the cost function has been reached
-<p align="center"><img src="png/dd837991786bbfa0bd84fa96a9ef45d9.png" align=middle width=204.557133pt height=16.438356pt/></p>
+<p align="center"><img src="png/png_color_blue/dd837991786bbfa0bd84fa96a9ef45d9.png" align=middle width=204.557133pt height=16.438356pt/></p>
  or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
 <p>
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="png/fd8be73b54f5436a5cd2e73ba9b6bfa9.png"  align=middle width=12pt height=50pt/>. Where Ridge <img src="png/8721ef437877ca67d513db00210345fe.png" align=middle width:47pt; height:20.6pt/> and Lasso <img src="png/cbf9f67dff9c696b64cb0671c65cac33.png"  align=middle width:44.51pt; height:20.65pt/>.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter <img src="png/png_color_blue/fd8be73b54f5436a5cd2e73ba9b6bfa9.png"  align=middle width=12pt height=50pt/>. Where Ridge <img src="png/png_color_blue/8721ef437877ca67d513db00210345fe.png" align=middle width:47pt; height:20.6pt/> and Lasso <img src="png/png_color_blue/cbf9f67dff9c696b64cb0671c65cac33.png"  align=middle width:44.51pt; height:20.65pt/>.
 </p>
 
-<p align="center"><img src="png/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.png" align=middle/></p>
+<p align="center"><img src="png/png_color_blue/LogisticConditionalLikelihoodWithRidgeAndLassoRegression.png" align=middle/></p>
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1). ie.
 
-<p align="center"><img src="png/c70f07f91936ea10cae16ace450a0984.png" align=middle width=260.2377294pt height=79.1309904pt/></p>
+<p align="center"><img src="png/png_color_blue/c70f07f91936ea10cae16ace450a0984.png" align=middle width=260.2377294pt height=79.1309904pt/></p>
 
 
 
