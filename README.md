@@ -68,9 +68,9 @@ The linear decision boundary shown in the figures results from setting the targe
  
 <h3>How to use</h3>
 
-<pre>	
-python logisticRegression.py
-</pre>
+##
+	python logisticRegression.py
+
 		
 		
 <h3>Expected Output</h3>
