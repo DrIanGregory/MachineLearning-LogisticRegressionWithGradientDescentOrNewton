@@ -35,13 +35,16 @@ $$
 And estimates located using optimisation of the conditional maximum Likelihood function
 
 $$
-	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )
+	\begin{equation}
+		L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )
+	\end{equation}
 $$
 
 using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
+
 $$
 	\begin{align}
 		\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber \\
