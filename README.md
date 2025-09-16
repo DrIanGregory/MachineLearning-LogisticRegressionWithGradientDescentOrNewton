@@ -8,12 +8,12 @@
 
 
 <p float="left">
-  <img src="/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
+  <img src="images/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
-  <img src="/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+  <img src="images/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
@@ -24,7 +24,7 @@ $$
    p(\hat{y}) = \frac{1}{1+e^{-\hat{y}}}
 $$
 
-Where $\hat{y}$ is given by $\lambda$
+Where $\hat{y}$ is given by 
 
 $$
 	\begin{equation}\label{eq:Hypothesis}
@@ -58,18 +58,18 @@ $$
 Parameter updating is given by
 
 $$
-\begin{align}
-	\theta_{n+1} 	&= \theta_n - \frac{\frac{\partial L}{\partial \theta_n}}{\frac{\partial^2 \mathcal{L}}{\partial \theta^2}} 					\nonumber \\
-					&= \theta_n - \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{-\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))} \nonumber \\
-					&= \theta_n + \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))}  \nonumber
-\end{align}
+	\begin{align}
+		\theta_{n+1} 	&= \theta_n - \frac{\frac{\partial L}{\partial \theta_n}}{\frac{\partial^2 \mathcal{L}}{\partial \theta^2}} 					\nonumber \\
+						&= \theta_n - \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{-\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))} \nonumber \\
+						&= \theta_n + \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))}  \nonumber
+	\end{align}
 $$
 
 Convergence is reached when either the tolerance level on the cost function has been reached
 
 $$
 	\begin{equation}
-		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
+		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert \lt \gamma
 	\end{equation}
 $$
 
@@ -78,7 +78,6 @@ or the full Hessian is no longer invertible or the maximum number of iterations 
  
 <h4>Regularisation</h4> 
 None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\lambda$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
-Does this work: $\sqrt{x^2 + y^2}$.??? or $`a^2 + b^2 = c^2`$. this ? what ```math SE = \frac{\sigma}{\sqrt{n}} ``` about ?
  
 $$
     	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
