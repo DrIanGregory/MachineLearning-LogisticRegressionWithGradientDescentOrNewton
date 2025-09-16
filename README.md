@@ -44,8 +44,8 @@ using either Gradient Ascent or Newton-Raphson methods.
 The parameter iterative updates are calculated as
 $$
 	\begin{align}
-		\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber\\
-					&= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk} \nonumber
+		\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber \\
+					 &= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk} \nonumber
 	\end{align}
 $$
 
@@ -65,13 +65,15 @@ $$
 Convergence is reached when either the tolerance level on the cost function has been reached
 
 $$
-	\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
+	\begin{align}
+		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
+	\end{align}
 $$
  or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\lambda$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $$\lambda$$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
  
 $$
     	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
