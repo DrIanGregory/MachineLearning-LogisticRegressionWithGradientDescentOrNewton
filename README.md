@@ -24,7 +24,7 @@ $$
    p(\hat{y}) = \frac{1}{1+e^{-\hat{y}}}
 $$
 
-Where $\hat{y}$ is given by
+Where $\hat{y}$ is given by $\lambda$
 
 $$
 	\begin{equation}\label{eq:Hypothesis}
