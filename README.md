@@ -83,9 +83,11 @@ $$
 
 or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
-  $\hat{y}$ 
+  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\hat{y}$  $\lambda$ $\hat{y}$ . Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter 
+$\lambda$ 
+. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
  
 $$
     	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
