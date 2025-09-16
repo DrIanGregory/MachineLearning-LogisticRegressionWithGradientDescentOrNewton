@@ -16,7 +16,9 @@
 			<img src="images/logisticRegressionBoundarySimple.png" width="460" alt="A simple view of Logistic regression boundary."/>
 		</th>
 	</tr>
-	
+</table>
+
+<table style="max-width:100%;white-space:nowrap;">
 	<tr>	
 		<th>	    
 			<img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
@@ -83,9 +85,12 @@ $$
 
 or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
-  
-<h4>Regularisation</h4>
 $\hat{y}$
+
+<h4>Regularisation</h4>
+
+$\hat{y}$
+
 None, either or both LASSO $\hat{y}$ (least absolute shrinkage and selection operator) $\hat{y}$ Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\hat{y}$ 
 $\lambda$ 
 . Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$. $\hat{y}$
