@@ -62,7 +62,7 @@ $$
 	\end{align}
 $$
 
- $\hat{y}$ 
+ 
 <h4>Newton-Raphson</h4> 
 
 Parameter updating is given by
@@ -84,16 +84,19 @@ $$
 or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
   
-<h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter 
+<h4>Regularisation</h4>
+$\hat{y}$
+None, either or both LASSO $\hat{y}$ (least absolute shrinkage and selection operator) $\hat{y}$ Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\hat{y}$ 
 $\lambda$ 
-. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
+. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$. $\hat{y}$
+ $\hat{y}$
  
 $$
     	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
 $$ 
  
-  
+ $\hat{y}$
+ 
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
 
@@ -104,7 +107,7 @@ $$
 	\end{align}
 $$
 
-  $\hat{y}$ 
+  
 <h3>How to use</h3>
 <pre>
 python logisticRegression.py
