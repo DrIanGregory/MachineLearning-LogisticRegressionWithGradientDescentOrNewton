@@ -7,15 +7,27 @@
 </ul>
 
 
-<p float="left">
-  <img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
-  <img src="images/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
-</p>
-<p float="left">
-  <img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="images/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
-</p>
- 
+<table style="max-width:100%;white-space:nowrap;">
+	<tr>	
+		<th>	    
+			<img src="images/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
+		</th>
+		<th>	    
+			<img src="images/logisticRegressionBoundarySimple.png" width="460" alt="A simple view of Logistic regression boundary."/>
+		</th>
+	</tr>
+	
+	<tr>	
+		<th>	    
+			<img src="images/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+		</th>
+		<th>	    
+			<img src="images/logisticRegressionNewtonCost.png" width="460" alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+		</th>
+	</tr>
+	
+</table>
+  
 
 <h3>Model:</h3>
 Estimate Logistic equation
@@ -67,10 +79,8 @@ $$
 
 Convergence is reached when either the tolerance level on the cost function has been reached
 
-$$
-	\begin{equation}
-		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert \lt \gamma
-	\end{equation}
+$$	
+		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert \lt \gamma	
 $$
 
 or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
