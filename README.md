@@ -26,9 +26,11 @@ $$
 
 Where $\hat{y}$ is given by
 
-\begin{equation}\label{eq:Hypothesis}
+$$
+	\begin{equation}\label{eq:Hypothesis}
 		\hat{y} = \Theta^T X + \epsilon = \theta_0 + \theta_1 x_1 + \theta_2 x_2 = \theta_0 + \theta_1 \text{SepalLength} +  \theta_2 \text{SepalWidth}
-\end{equation}
+	\end{equation}
+$$
 
 And estimates located using optimisation of the conditional maximum Likelihood function
 
@@ -40,21 +42,25 @@ using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
-\begin{align}
-	\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber\\
-    			 &= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk} \nonumber
-\end{align}
+$$
+	\begin{align}
+		\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber\\
+					&= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk} \nonumber
+	\end{align}
+$$
 
 
 <h4>Newton-Raphson</h4> 
 
 Parameter updating is given by
 
+$$
 \begin{align}
 	\theta_{n+1} 	&= \theta_n - \frac{\frac{\partial L}{\partial \theta_n}}{\frac{\partial^2 \mathcal{L}}{\partial \theta^2}} 					\nonumber \\
 					&= \theta_n - \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{-\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))} \nonumber \\
 					&= \theta_n + \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))}  \nonumber
 \end{align}
+$$
 
 Convergence is reached when either the tolerance level on the cost function has been reached
 
@@ -73,11 +79,12 @@ $$
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
-
-\begin{align}
-	x_2 &= - \frac{\theta_0 + \theta_1 x_1}{\theta_2}								\nonumber \\
-	\text{SepalWidth} &= - \frac{\theta_0 + \theta_1 \text{SepalLength}}{\theta_2}  \nonumber
-\end{align}
+$$
+	\begin{align}
+		x_2 &= - \frac{\theta_0 + \theta_1 x_1}{\theta_2}								\nonumber \\
+		\text{SepalWidth} &= - \frac{\theta_0 + \theta_1 \text{SepalLength}}{\theta_2}  \nonumber
+	\end{align}
+$$
 
  
 <h3>How to use</h3>
