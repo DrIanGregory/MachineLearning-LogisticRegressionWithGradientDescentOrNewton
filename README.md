@@ -8,69 +8,82 @@
 
 
 <p float="left">
-  <img src="images/logisticRegressionBoundaryFancy.png" width="45%" alt="A fancy view of Logistic regression boundary."/>
-  <img src="images/logisticRegressionBoundarySimple.png" width="45%"alt="A simple view of Logistic regression boundary."/>
+  <img src="/logisticRegressionBoundaryFancy.png" width="400" alt="A fancy view of Logistic regression boundary."/>
+  <img src="/logisticRegressionBoundarySimple.png" width="460"alt="A simple view of Logistic regression boundary."/>
 </p>
 <p float="left">
-  <img src="images/logisticRegressionGradientAscentCost.png" width="45%" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
-  <img src="images/logisticRegressionNewtonCost.png" width="45%" alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
+  <img src="/logisticRegressionGradientAscentCost.png" width="400" alt="Cost of Gradient Ascent algorithm improvement through epochs."/>
+  <img src="/logisticRegressionNewtonCost.png" width="460"alt="Cost of Newton-Raphson algorithm improvement through epochs."/>
 </p>
  
 
 <h3>Model:</h3>
-<b>Estimate Logistic equation</b>
+Estimate Logistic equation
 
-<p align="center"><img src="svgs/77f007d76a70b0d25e05fe3e7c470caa.svg" align=middle width=107.73545145pt height=34.3600389pt/></p>
+$$
+   p(\hat{y}) = \frac{1}{1+e^{-\hat{y}}}
+$$
 
-Where <img src="svgs/282f38ecf82d8d7b9d2813044262d5f3.svg" align=middle width=9.347490899999991pt height=22.831056599999986pt/> is given by
+Where $\hat{y}$ is given by
 
-<p align="center"><img src="svgs/485220363cbc49355345c0869b2efbdc.svg" align=middle width=608.6145483pt height=18.7598829pt/></p>
+\begin{equation}\label{eq:Hypothesis}
+		\hat{y} = \Theta^T X + \epsilon = \theta_0 + \theta_1 x_1 + \theta_2 x_2 = \theta_0 + \theta_1 \text{SepalLength} +  \theta_2 \text{SepalWidth}
+\end{equation}
 
 And estimates located using optimisation of the conditional maximum Likelihood function
 
-<p align="center"><img src="svgs/ec97e55044e066eda74b67178cbac5b1.svg" align=middle width=429.7248631499999pt height=47.60747145pt/></p>
+$$
+	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )
+$$
 
 using either Gradient Ascent or Newton-Raphson methods.
  
 <h4>Gradient Ascent</h4> 
 The parameter iterative updates are calculated as
-<p align="center"><img src="svgs/248c208805e4a629ea7ce79de37903bf.svg" align=middle width=241.29400679999998pt height=92.10448995pt/></p>
+\begin{align}
+	\theta_{n+1} &= \theta_n + \alpha \frac{\partial L}{\partial \theta_n}   \nonumber\\
+    			 &= \theta_n + \alpha \sum^{N}_{n=0} \Bigl ( y_n - p(\hat{y}) \Bigr ) x_{nk} \nonumber
+\end{align}
 
 
 <h4>Newton-Raphson</h4> 
 
 Parameter updating is given by
 
-<p align="center"><img src="svgs/e784cf3c8a6a969c61573defc296325a.svg" align=middle width=292.36726035pt height=153.69754785pt/></p>
+\begin{align}
+	\theta_{n+1} 	&= \theta_n - \frac{\frac{\partial L}{\partial \theta_n}}{\frac{\partial^2 \mathcal{L}}{\partial \theta^2}} 					\nonumber \\
+					&= \theta_n - \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{-\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))} \nonumber \\
+					&= \theta_n + \frac{\sum^{N}_{n=1} \left ( y_n - p(\hat{y}_n) \right ) x_{nk}}{\sum^N_{i=1} X^T X p(\hat{y}) (1 - p(\hat{y}))}  \nonumber
+\end{align}
 
 Convergence is reached when either the tolerance level on the cost function has been reached
 
-<p align="center"><img src="svgs/dd837991786bbfa0bd84fa96a9ef45d9.svg" align=middle width=204.557133pt height=16.438356pt/></p>
+$$
+	\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
+$$
  or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter 
-<span><img src="svgs/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg" align=middle width=9.58pt height=22.831pt/></span>.
-
-
-
-Where Ridge <img align=middle float:left src="svgs/8721ef437877ca67d513db00210345fe.svg" width=52.51pt height=24.65pt/> and Lasso <img align=middle src="svgs/cbf9f67dff9c696b64cb0671c65cac33.svg" width=52.51pt height=24.657pt/>.
-
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\lambda$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
  
-<p align="center"><img src="svgs/aff50dde12db26f251d72a6915701b03.svg" align=middle width=631.4218416pt height=47.60747145pt/></p> 
+$$
+    	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
+$$ 
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
 
-<p align="center"><img src="svgs/c70f07f91936ea10cae16ace450a0984.svg" align=middle width=260.2377294pt height=79.1309904pt/></p>
+\begin{align}
+	x_2 &= - \frac{\theta_0 + \theta_1 x_1}{\theta_2}								\nonumber \\
+	\text{SepalWidth} &= - \frac{\theta_0 + \theta_1 \text{SepalLength}}{\theta_2}  \nonumber
+\end{align}
 
  
 <h3>How to use</h3>
-
-##
-	python logisticRegression.py
-
+<pre>
+python logisticRegression.py
+</pre>
 		
 		
 <h3>Expected Output</h3>
