@@ -68,15 +68,16 @@ $$
 Convergence is reached when either the tolerance level on the cost function has been reached
 
 $$
-	\begin{align}
+	\begin{equation}
 		\vert \ell(\Theta,X)_{n} - \ell(\Theta,X)_{n-1} \vert < \gamma
-	\end{align}
+	\end{equation}
 $$
- or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
+
+or the full Hessian is no longer invertible or the maximum number of iterations has been exceeded.
  
  
 <h4>Regularisation</h4> 
-None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $$\lambda$$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
+None, either or both LASSO (least absolute shrinkage and selection operator) Regression (L1) or Ridge Regression (L2) are implemented using the mixing parameter $\lambda$. Where Ridge $(\lambda=0)$ and Lasso $(\lambda=1)$.
  
 $$
     	L(\Theta ; y_n,x_n) = -\sum^{N}_{n=1}  \Bigl (  y_n log[p(\hat{y}_n)] + (1 - y_n) log[1-p(\hat{y}_n)]  \Bigr )  + (1-\lambda) \sum^N_{n=1} \theta^2_k + \lambda \sum^N_{n=1} \vert \theta_k \vert
@@ -84,6 +85,7 @@ $$
  
 <h3>Decision Boundary</H3>
 The linear decision boundary shown in the figures results from setting the target variable to zero and rearranging equation (1).
+
 $$
 	\begin{align}
 		x_2 &= - \frac{\theta_0 + \theta_1 x_1}{\theta_2}								\nonumber \\
